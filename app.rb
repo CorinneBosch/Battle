@@ -19,8 +19,16 @@ get '/random-cat' do
 end
 
 get '/name-cat' do
-  # p params
   @name = params[:name]
-  puts params
+  p params
   erb(:index)
 end
+
+get '/named-cat' do
+  @name = params[:name]
+  p params
+  erb :named_cat
+end
+
+
+# http://localhost:4567/
