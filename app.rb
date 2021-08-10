@@ -24,3 +24,9 @@ get '/name-cat' do
   puts params
   erb(:index)
 end
+
+get '/named-cat' do
+ @name = params[:name]
+ puts params
+ erb(:index)
+end
