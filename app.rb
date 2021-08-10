@@ -19,12 +19,14 @@ get '/random-cat' do
 end
 
 get '/name-cat' do
+  # p params
   @name = params[:name]
-  p params
+  puts params
   erb(:index)
 end
 
 get '/named-cat' do
+<<<<<<< HEAD
   @name = params[:name]
   erb :index
 end
@@ -37,7 +39,19 @@ post '/named-cat' do
   p params
   @name = params[:name]
   erb(:index)
+=======
+ @name = params[:name]
+ puts params
+ erb(:index)
+>>>>>>> 5d1b563b25fff4e67946b1bec03a0ef56b430c35
 end
 
+get '/cat-naming-form' do
+  erb(:cat_naming_form)
+end  
 
-# http://localhost:4567/
+post '/named-cat' do
+  p params
+  @name = params[:name]
+  erb(:index)
+end  
