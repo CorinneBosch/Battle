@@ -26,8 +26,17 @@ end
 
 get '/named-cat' do
   @name = params[:name]
+  erb :index
+end
+
+get '/cat-naming-form' do
+  erb(:cat_naming_form)
+end
+
+post '/named-cat' do
   p params
-  erb :named_cat
+  @name = params[:name]
+  erb(:index)
 end
 
 
