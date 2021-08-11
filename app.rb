@@ -1,16 +1,26 @@
 require 'sinatra/base'
 require 'sinatra/reloader'
-require 'capybara'
-require 'capybara/rspec'
-require 'rspec'
 
 class Battle < Sinatra::Base
   configure:development do 
     register Sinatra::Reloader
   end
+
+  # get '/' do
+  #   'Testing infrastructure working!'
+  # end
+ 
+
   get '/' do
-    'Hello Battle!'
+    erb :index
   end
+
+  post '/names' do
+    @first_player = params[:first_player]
+    @second_player = params[:second_player]
+    erb :play
+  end
+
   run! if app_file == $0
 end
 
