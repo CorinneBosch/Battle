@@ -2,9 +2,12 @@ require 'sinatra/base'
 require 'sinatra/reloader'
 
 class Battle < Sinatra::Base
+  enable :sessions
   configure:development do 
     register Sinatra::Reloader
   end
+  
+  
 
   # get '/' do
   #   'Testing infrastructure working!'
@@ -16,8 +19,14 @@ class Battle < Sinatra::Base
   end
 
   post '/names' do
-    @first_player = params[:first_player]
-    @second_player = params[:second_player]
+    session[:first_player] = params[:first_player]
+    session[:second_player] = params[:second_player]
+    redirect '/play'
+  end
+
+  get '/play' do
+    @first_player = session[:first_player]
+    @second_player = session[:second_player]
     erb :play
   end
 
