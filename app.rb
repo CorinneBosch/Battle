@@ -1,5 +1,8 @@
 require 'sinatra/base'
 require 'sinatra/reloader'
+require 'capybara'
+require 'capybara/rspec'
+require 'rspec'
 
 class Battle < Sinatra::Base
   configure:development do 
