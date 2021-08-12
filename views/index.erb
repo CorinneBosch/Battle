@@ -1,13 +1,19 @@
-<h1>Battle!</h1>
-<h2>Sign in to play</h2>
-<form action="/names" method="post"=>
-<label for="first_player">
-First player
-  <input text="text" name="first_player">
-  </label>
-  <label for= "second_player">
-Second player
-  <input text="text" name="second_player">
-  </label>
-  <input type="submit" value="Enter">
-</form>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Battle the Battle</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <section id='box'>
+      <form method="post" action="/names">
+        <h3>Welcome to the battle of battles!</h3>
+        <label for='first_player'>First player:</label><br>
+        <input type="text" name="first_player"><br>
+        <label for='second_player'>Second player:</label><br>
+        <input type="text" name="second_player"><br>
+        <button type='submit' style>Enter</button>
+      </form>
+    </section>
+  </body>
+</html>

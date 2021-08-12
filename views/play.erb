@@ -1,1 +1,25 @@
-<%= @first_player %> vs. <%= @second_player %>
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Battle the Battle</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <section id='box'>
+      <form action='/attack'>
+      <section id='player_name'>
+        <%= @first_player %> vs. <%= @second_player %>
+      </section>
+      <section id='health'>
+        <div first_player="<%= @health1 %>"><%= @health1 %>/<%= @default_health %> HP</div>
+        <div second_player="<%= @health2 %>"><%= @health2 %>/<%= @default_health %> HP</div>
+      </section>
+
+      <section id='attack'>
+         <button id='attack' type='submit' style>Attack</button>
+      </section>
+      </form>
+    </section>
+  </body>
+</html>

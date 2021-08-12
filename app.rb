@@ -2,18 +2,13 @@ require 'sinatra/base'
 require 'sinatra/reloader'
 
 class Battle < Sinatra::Base
-  enable :sessions
+  
   configure:development do 
     register Sinatra::Reloader
   end
-  
-  
 
-  # get '/' do
-  #   'Testing infrastructure working!'
-  # end
- 
-
+  enable :sessions
+  
   get '/' do
     erb :index
   end
@@ -27,10 +22,17 @@ class Battle < Sinatra::Base
   get '/play' do
     @first_player = session[:first_player]
     @second_player = session[:second_player]
+    @health1 = 60
+    @health2 = 60
+    @default_health = 60
     erb :play
+  end
+
+  get '/attack' do
+    @first_player = session[:first_player]
+    @second_player = session[:second_player]
+    erb :attack
   end
 
   run! if app_file == $0
 end
-
-# http://localhost:9292/
