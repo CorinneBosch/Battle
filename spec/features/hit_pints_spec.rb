@@ -21,5 +21,4 @@ feature 'Displays players score' do
     click_button 'Attack'
     expect(page).to have_content 'Eldegoss: 50/60 HP'
   end
-  
 end
