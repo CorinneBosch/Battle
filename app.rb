@@ -16,7 +16,6 @@ class Battle < Sinatra::Base
 
   post '/names' do
     $first_player = Player.new(params[:first_player])
-    # p $first_player.hp
     $second_player = Player.new(params[:second_player])
     redirect '/play'
   end
@@ -26,6 +25,7 @@ class Battle < Sinatra::Base
   end
 
   get '/attack' do
+    $second_player.is_attacked
     erb :attack
   end
 

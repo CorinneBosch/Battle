@@ -8,5 +8,8 @@
     <section id="attack">
       <%= $first_player.name %> attacked <%= $second_player.name %>
     </section>
+    <section id='health'>
+      <div second_player=hp2><%= "#{$second_player.name}: #{$second_player.hp}" %>/<%= "#{Player::DEFAULT_HEALTH}" %> HP</div>
+    </section>
   </body>
 </html>
