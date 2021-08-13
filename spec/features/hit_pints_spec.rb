@@ -14,5 +14,12 @@ feature 'Displays players score' do
     # expect(score).not_to be(nil)
     expect(page).to have_content 'Eldegoss: 60/60 HP'
   end
+
+  scenario 'Reduces player 2 health by 10 HP' do
+    visit('/play')
+    sign_in_and_play
+    click_button 'Attack'
+    expect(page).to have_content 'Eldegoss: 50/60 HP'
+  end
   
 end

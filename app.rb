@@ -1,4 +1,4 @@
-require 'player'
+require_relative 'lib/player'
 require 'sinatra/base'
 require 'sinatra/reloader'
 
@@ -16,14 +16,12 @@ class Battle < Sinatra::Base
 
   post '/names' do
     $first_player = Player.new(params[:first_player])
+    # p $first_player.hp
     $second_player = Player.new(params[:second_player])
     redirect '/play'
   end
 
   get '/play' do
-    @health1 = 60
-    @health2 = 60
-    @default_health = 60
     erb :play
   end
 
