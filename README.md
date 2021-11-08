@@ -43,7 +43,7 @@ Goals:
 5. Install the gems required by this repository.
 `bundle install`
 
-## Interact with the program
+## Interact with the programme
 
 Open the application in your terminal with `ruby app.rb`
 
