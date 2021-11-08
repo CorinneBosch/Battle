@@ -5,6 +5,4 @@ feature 'attacking' do
     click_button 'Attack'
     expect(page).to have_content("Frosmoth attacked Eldegoss")
   end
-
-  
 end
