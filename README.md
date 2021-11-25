@@ -15,6 +15,9 @@ Intro to the web
      _\_||_/_           
     (_,_||_,_)
 ```
+______
+ 
+[Set up](#Setup) | [Interact](#Interact) | [Run Tests](#Tests) | [User Stories](#User-Stories)
 
 ## Afternoon challenge: Battle Game
 In this challenge we learned & implementing the follwoing practices while pair programming:
@@ -33,7 +36,7 @@ Goals:
 - Explain the basics of how the web works (e.g. request/response, HTTP, HTML, CSS)
 - Explain the MVC pattern
 
-## Setup
+## <a name="Setup">Set up</a>
 
 1. **Fork** this [Battle repository](https://github.com/CorinneBosch/Battle/) 
 2. Then clone **your** fork to your computer.
@@ -43,18 +46,18 @@ Goals:
 5. Install the gems required by this repository.
 `bundle install`
 
-## Interact with the programme
+## <a name="Interact">Interact with the programme</a>
 
 Open the application in your terminal with `ruby app.rb`
 
-Direct in your browser to `http://localhost:4567` and start playing!
+Direct in your browser to `http://localhost:4567` and start playing!\
 May the force be with you...
 
 You can frature test and run the battle program in any `code editor` or `IRB`. 
 
-## Run test 
+## <a name="Tests">Run tests</a>
 
-To test all units and features at once in your terminal.
+To test all units and features at once in your terminal.\
 Print out the format documentation with the -fd shortcut.
 ```
 $ rspec
@@ -67,7 +70,7 @@ $ rspec spec/units/player_spec.rb -fd
 $ rspec spec/features/attack_spec.rb -fd
 ```
 
-## The battle challenge is built upon the following user stories:
+## <a name="User-Stories">The battle challenge is built upon the following user stories:</a>
 
 ```
 As two Players,
