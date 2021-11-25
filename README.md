@@ -16,7 +16,7 @@ Intro to the web
     (_,_||_,_)
 ```
 
-## Afternoon challenge: Battle
+## Afternoon challenge: Battle Game
 In this challenge we learned & implementing the follwoing practices while pair programming:
 
 - Introduction to Sinatra, HTML and Web apps
